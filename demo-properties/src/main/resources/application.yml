@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+
+developer:
+  name: xujia
+  website: 123@qq.com
+  qq: 123
+
+application:
+  name: xujia
+  version: 1.0
