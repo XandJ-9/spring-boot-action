@@ -1,7 +1,7 @@
 package com.bookcode.config;
 
 
-import com.bookcode.batch.CsvBeanValidator;
+//import com.bookcode.batch.CsvBeanValidator;
 import com.bookcode.batch.CsvItemProcessor;
 import com.bookcode.batch.CsvLineMapper;
 import com.bookcode.entity.Person;
@@ -24,6 +24,9 @@ import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
 import org.springframework.batch.item.file.mapping.DefaultLineMapper;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 import org.springframework.batch.item.file.transform.LineTokenizer;
+import org.springframework.batch.item.validator.ValidationException;
+import org.springframework.batch.item.validator.Validator;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
@@ -34,7 +37,7 @@ import javax.sql.DataSource;
 // 注解配置类
 @Configuration
 // 开启批处理支持
-@EnableBatchProcessing
+//@EnableBatchProcessing
 public class BatchConfig {
 
 
@@ -70,6 +73,12 @@ public class BatchConfig {
         simpleJobLauncher.setJobRepository(jobRepository);
         return simpleJobLauncher;
     }
+
+    @Autowired
+    JobBuilderFactory jobBuilderFactory;
+
+    @Autowired
+    StepBuilderFactory stepBuilderFactory;
 
     /**
      * Job 定义作业任务
@@ -145,7 +154,12 @@ public class BatchConfig {
     @Bean
     public ItemProcessor<Person, Person> process(){
         CsvItemProcessor csvItemProcessor = new CsvItemProcessor();
-        csvItemProcessor.setValidator(new CsvBeanValidator<>());
+        csvItemProcessor.setValidator(new Validator<Person>() {
+            @Override
+            public void validate(Person person) throws ValidationException {
+                System.out.println("validator person object");
+            }
+        });
         return csvItemProcessor;
     }
 

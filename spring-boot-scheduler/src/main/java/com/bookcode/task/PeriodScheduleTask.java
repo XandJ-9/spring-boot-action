@@ -1,5 +1,6 @@
 package com.bookcode.task;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -15,13 +16,12 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 @Slf4j
-@Getter
-@Setter
+@Data
 @Component
 @PropertySource("classpath:/task-config.ini")
 public class PeriodScheduleTask implements SchedulingConfigurer {
 
-    @Value("printTime.period")
+    @Value("${printTime.period}")
     private Long period = 1000L;
 
     @Override
