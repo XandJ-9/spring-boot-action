@@ -19,7 +19,6 @@ public class TaskService {
     @Resource
     private Job job;
 
-    private JobParameter jobParameter;
 
     @Scheduled(fixedRate = 5000)
     public void execute() throws JobInstanceAlreadyCompleteException, JobExecutionAlreadyRunningException, JobParametersInvalidException, JobRestartException {
