@@ -24,6 +24,7 @@
         <module>demo-dynamic-datasource</module>
         <module>demo-logback</module>
         <module>demo-properties</module>
+        <module>spring-boot-mybatisplus</module>
     </modules>
 
     <properties>
