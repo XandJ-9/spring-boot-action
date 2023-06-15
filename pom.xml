@@ -25,6 +25,7 @@
         <module>demo-properties</module>
         <module>demo-mybatisplus</module>
         <module>demo-spring-security</module>
+        <module>demo-web-with-scalacode</module>
     </modules>
 
     <properties>
