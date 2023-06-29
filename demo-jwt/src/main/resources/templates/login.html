@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="background-color: #5bc0de; margin: auto; width: 250px; ">
+    <form id="loginForm">
+        <div style="margin: 30px; padding: inherit">
+            <label >用户名：</label><input type="text" name="username">
+            <br>
+            <label >密码：</label><input type="password" name="password">
+            <br>
+            <input id="submit" type="submit" value="登陆" onclick="">
+        </div>
+
+    </form>
+
+
+
+</div>
+
+
+</body>
+
+
+<script>
+    const submit = document.getElementById("submit");
+    submit.onclick = function (){
+        console.log(submit.getAttributeNames())
+    }
+
+
+</script>
+</html>

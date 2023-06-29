@@ -19,7 +19,9 @@ import java.util.List;
 import java.util.Objects;
 
 @Controller
-public class FileUploadController {
+public class FileUpDownloadController {
+
+    private static final String uploadPath = "files";
 
     @RequestMapping("/file")
     public String file() {
@@ -32,7 +34,7 @@ public class FileUploadController {
         if (!file.isEmpty()) {
             try {
                 // 将上传的文件写出到应用指定的文件目录下
-                BufferedOutputStream out = new BufferedOutputStream(Files.newOutputStream(new File(Objects.requireNonNull(file.getOriginalFilename())).toPath()));
+                BufferedOutputStream out = new BufferedOutputStream(Files.newOutputStream(new File(uploadPath ,Objects.requireNonNull(file.getOriginalFilename())).toPath()));
                 out.write(file.getBytes());
                 out.flush();
                 out.close();
