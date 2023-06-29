@@ -11,7 +11,7 @@
 
     <artifactId>demo-scheduler</artifactId>
 
-    <name>spring-boot-scheduler</name>
+    <name>demo-scheduler</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 

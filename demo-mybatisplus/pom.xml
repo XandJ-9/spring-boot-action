@@ -10,7 +10,7 @@
     <artifactId>demo-mybatisplus</artifactId>
     <packaging>jar</packaging>
 
-    <name>spring-boot-mybatisplus</name>
+    <name>demo-mybatisplus</name>
     <url>http://maven.apache.org</url>
 
     <properties>

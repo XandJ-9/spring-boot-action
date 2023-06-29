@@ -10,7 +10,7 @@
     <artifactId>demo-spring-security</artifactId>
     <packaging>jar</packaging>
 
-    <name>spring-boot-security</name>
+    <name>demo-spring-security</name>
     <url>http://maven.apache.org</url>
 
     <properties>

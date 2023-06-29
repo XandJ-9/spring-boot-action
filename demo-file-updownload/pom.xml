@@ -11,7 +11,7 @@
 
     <artifactId>demo-file-updownload</artifactId>
 
-    <name>spring-boot-file-updownload</name>
+    <name>demo-file-updownload</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 

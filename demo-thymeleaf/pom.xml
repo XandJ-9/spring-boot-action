@@ -11,7 +11,7 @@
 
     <artifactId>demo-thymeleaf</artifactId>
 
-    <name>spring-boot-thymeleaf</name>
+    <name>demo-thymeleaf</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 

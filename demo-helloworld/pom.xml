@@ -11,7 +11,7 @@
 
     <artifactId>demo-helloworld</artifactId>
 
-    <name>spring-boot-helloworld</name>
+    <name>demo-helloworld</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 

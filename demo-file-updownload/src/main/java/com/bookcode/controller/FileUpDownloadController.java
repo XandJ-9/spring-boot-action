@@ -21,7 +21,7 @@ import java.util.Objects;
 @Controller
 public class FileUpDownloadController {
 
-    private static final String uploadPath = "files";
+    private static final String UP_DOWN_PATH = "files";
 
     @RequestMapping("/file")
     public String file() {
@@ -34,7 +34,7 @@ public class FileUpDownloadController {
         if (!file.isEmpty()) {
             try {
                 // 将上传的文件写出到应用指定的文件目录下
-                BufferedOutputStream out = new BufferedOutputStream(Files.newOutputStream(new File(uploadPath ,Objects.requireNonNull(file.getOriginalFilename())).toPath()));
+                BufferedOutputStream out = new BufferedOutputStream(Files.newOutputStream(new File(UP_DOWN_PATH ,Objects.requireNonNull(file.getOriginalFilename())).toPath()));
                 out.write(file.getBytes());
                 out.flush();
                 out.close();
@@ -69,7 +69,7 @@ public class FileUpDownloadController {
                 try {
                     byte[] bytes = file.getBytes();
 
-                    out = new BufferedOutputStream(Files.newOutputStream(Paths.get(Objects.requireNonNull(file.getOriginalFilename()))));
+                    out = new BufferedOutputStream(Files.newOutputStream(new File(UP_DOWN_PATH,Objects.requireNonNull(file.getOriginalFilename())).toPath()));
                     out.write(bytes);
                     out.close();
 

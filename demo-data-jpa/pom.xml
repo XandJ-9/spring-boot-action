@@ -11,7 +11,7 @@
 
     <artifactId>demo-data-jpa</artifactId>
 
-    <name>spring-boot-data-jpa</name>
+    <name>demo-data-jpa</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
