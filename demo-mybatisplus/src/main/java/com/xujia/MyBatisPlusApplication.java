@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
-@MapperScan("com.xujia.mapper")
+@MapperScan("com.xujia")
 public class MyBatisPlusApplication
 {
     public static void main( String[] args )

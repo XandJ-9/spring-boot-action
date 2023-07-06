@@ -1,15 +1,19 @@
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
   mapper-locations: classpath:*/mapper/*.xml
 spring:
   datasource:
-    driver-class-name: org.h2.Driver
+#    driver-class-name: org.h2.Driver
     username: root
-    password: test
+    password: 12345678
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test
   sql:
     init:
-      schema-locations: classpath:sql/schema-h2.sql
-      data-locations: classpath:sql/data-h2.sql
+#      mode: never
+      schema-locations: classpath:sql/schema-mysql.sql
+      data-locations: classpath:sql/data-mysql.sql
 
 

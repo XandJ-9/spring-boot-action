@@ -1,7 +1,7 @@
-package com.xujia.controller;
+package com.xujia.demo.quickstart.controller;
 
-import com.xujia.domain.User;
-import com.xujia.mapper.UserMapper;
+import com.xujia.demo.quickstart.domain.User;
+import com.xujia.demo.quickstart.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
