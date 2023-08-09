@@ -27,12 +27,14 @@
         <module>demo-spring-security</module>
         <module>demo-web-with-scalacode</module>
         <module>demo-jwt</module>
+        <module>demo-shiro</module>
     </modules>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <springboot.version>2.5.4</springboot.version>
+        <mybatisplus.version>3.5.1</mybatisplus.version>
     </properties>
 
     <dependencyManagement>
@@ -133,6 +135,13 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>8.0.20</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatisplus.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
