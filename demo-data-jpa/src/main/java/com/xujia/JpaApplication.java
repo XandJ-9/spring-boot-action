@@ -19,28 +19,28 @@ public class JpaApplication
 
 
 
-    @Bean
-    public CommandLineRunner demo(UserRepository repository){
-        return (args -> {
-            repository.save(new User("Jack","Bauer"));
-            repository.save(new User("Chloe","O'Brian"));
-            repository.save(new User("Kim","Bauer"));
-            repository.save(new User("David","Palmer"));
-            repository.save(new User("Michelle","Dessler"));
-
-            log.info("Users found with findAll():");
-            log.info("----------------------------");
-
-            for(Object user: repository.findAll()){
-                log.info(user.toString());
+//    @Bean
+//    public CommandLineRunner demo(UserRepository repository){
+//        return (args -> {
+//            repository.save(new User("Jack","Bauer"));
+//            repository.save(new User("Chloe","O'Brian"));
+//            repository.save(new User("Kim","Bauer"));
+//            repository.save(new User("David","Palmer"));
+//            repository.save(new User("Michelle","Dessler"));
+//
+//            log.info("Users found with findAll():");
+//            log.info("----------------------------");
+//
+//            for(Object user: repository.findAll()){
+//                log.info(user.toString());
 //                repository.findById(1L)
 //                        .ifPresent(User -> {
 //                            log.info("User found with findById(1L):");
 //                            log.info(User.toString());
 //                        });
-            }
-        });
-    }
+//            }
+//        });
+//    }
 
     public static void main( String[] args )
     {

@@ -3,11 +3,11 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC
     username: root
-    password: 12345678
+    password: 123456
   jpa:
     # 日志打印
     show-sql: true
   sql:
     init:
-      mode: always
+      mode: never
       schema-locations: classpath*:schema.sql
